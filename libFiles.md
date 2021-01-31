@@ -1,0 +1,2 @@
+# LIB File Format
+The lib file format is whats outputed from the assembler. it cannot be run by the cpu yet as it needs to be linked woth the libraries it used. it is the serialized XML of the Library Class of the Assembler.

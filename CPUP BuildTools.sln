@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUPA", "CPUPA\CPUPA.csproj", "{BAE27E6C-3213-4C94-B8F8-DDE6FCD88E11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPUPA", "CPUPA\CPUPA.csproj", "{BAE27E6C-3213-4C94-B8F8-DDE6FCD88E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUPLinker", "CPUPLinker\CPUPLinker.csproj", "{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BAE27E6C-3213-4C94-B8F8-DDE6FCD88E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAE27E6C-3213-4C94-B8F8-DDE6FCD88E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAE27E6C-3213-4C94-B8F8-DDE6FCD88E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

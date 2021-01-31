@@ -1,0 +1,11 @@
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.csprojAssemblyReference.cache
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.AssemblyInfo.cs
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.deps.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.runtimeconfig.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.runtimeconfig.dev.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.pdb
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.pdb
