@@ -42,7 +42,9 @@ namespace CPUPA
             data = Tables.defaultData.Concat(data).ToList();
             if (!isLib)
             {
+                
                 data = Tables.defaultProgramData.Concat(data).ToList();
+                data[0] = data[0].Replace("$$", "" + stackSize);
             }
             //Add Setup function if needed
             if (!isLib)
@@ -76,8 +78,9 @@ namespace CPUPA
                     List<string> instructionCode = Tables.translatedInstructions[command.Trim().Split(" ")[0]];
                     instructionCode.Reverse();
                     
-                    foreach (string s in instructionCode)
+                    foreach (string a in instructionCode)
                     {
+                        string s = a;
                         //Replacing with arg 1
                         if (s.Contains("$$"))
                         {
@@ -88,7 +91,7 @@ namespace CPUPA
                                 throw new Exception("-9");
                             }
 
-                            s.Replace("$$", command.Trim().Split(" ")[1]);
+                             s = s.Replace("$$", command.Trim().Split(" ")[1]);
                         }
                         //Replacing with arg 2
                         if (s.Contains("%%"))
@@ -100,7 +103,7 @@ namespace CPUPA
                                 throw new Exception("-9");
                             }
 
-                            s.Replace("%%", command.Trim().Split(" ")[2]);
+                            s = s.Replace("%%", command.Trim().Split(" ")[2]);
                         }
 
                         //Insert

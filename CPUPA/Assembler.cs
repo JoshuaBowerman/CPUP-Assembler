@@ -83,7 +83,7 @@ namespace CPUPA
              * 
              * 
              */
-
+            Console.WriteLine("    Generating Machine Code");
             //Allocate main jump if required
             if (!isLib)
             {
@@ -173,7 +173,7 @@ namespace CPUPA
                                     converted = Int16.Parse(v.Trim());
                                 }catch(Exception e)
                                 {
-                                    Console.WriteLine("ERROR: Could not parse integer. Value:{0} Error:\n{1}", v, e.Message);
+                                    Console.WriteLine("ERROR: Could not parse integer. Value:{0} Error:\n{1}\nLine:\n{2}", v, e.Message,line);
                                     throw new Exception("-6");
                                     
                                 }
@@ -205,7 +205,7 @@ namespace CPUPA
                             }
                             catch (Exception e)
                             {
-                                Console.WriteLine("ERROR: Could not parse integer. Value:{0} {1} Error:\n{2}", line.Split(" ")[2].Trim(), line.Split(" ")[3].Trim(), e.Message);
+                                Console.WriteLine("ERROR: Could not parse integer. Value:{0} {1} Error:\n{2}\nLine:\n{3}", line.Split(" ")[2].Trim(), line.Split(" ")[3].Trim(), e.Message,line);
                                 throw new Exception("-6");
                             }
 
@@ -240,8 +240,13 @@ namespace CPUPA
                     //This is where we start turning instructions into machine code.
                     //check to see if it's the end
 
+                    //End Of Function Line
+                    if(line == "end")
+                    {
+                        definingFunction = false;
+                    }
                     //Location Pointer Line
-                    if (line.StartsWith(":"))
+                     else if (line.StartsWith(":"))
                     {
                         //Register the address
                         lib.internalAddresses.Add(pointers[line], lib.code.Count);
@@ -455,7 +460,18 @@ namespace CPUPA
             }
 
 
+            //If we are not a library we need to setup the jump at the beginning
+            if (!isLib)
+            {
+                int functionID = functions["CPUPA.SETUP"];
 
+                ushort instruction = 0;
+                instruction += (ushort)(Tables.instructionTable["JMP"] << 12);
+                instruction += (ushort)(Tables.typeTable["REG"] << 10);
+                instruction += 2; //attached data
+                lib.code[0] = instruction;
+                lib.code[1] = functionID;
+            }
             return lib;
         }
 

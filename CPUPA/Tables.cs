@@ -80,7 +80,7 @@ namespace CPUPA
         // The function name should be CPUP.SETUP
         public static List<string> setupCode = new List<string>()
         {
-            "define CPUP.SETUP",
+            "define CPUPA.SETUP",
             "MOV .CPUPA.STACK ST",
             "CALL MAIN",
             ":CPUPA.HLT",
@@ -120,7 +120,7 @@ namespace CPUPA
                 "MOV P [ST]",
                 "JMP $$",
                 "NOP",
-                "MOV [.CPUP.TEMP] A"
+                "MOV [.CPUPA.TEMP] A"
             } }
         };
     }

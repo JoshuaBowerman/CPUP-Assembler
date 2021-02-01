@@ -9,3 +9,4 @@ C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.dl
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\CPUPA.pdb
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.dll
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\CPUPA.pdb
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\test.cpa

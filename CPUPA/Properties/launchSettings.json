@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CPUPA": {
+      "commandName": "Project",
+      "commandLineArgs": " ./test.cpa out.lib"
+    }
+  }
+}

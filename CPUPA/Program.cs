@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -116,10 +117,11 @@ Switches:
             
 
             //Write
-            XmlSerializer serializer = new XmlSerializer(typeof(Library));
+           
             var sww = new StringWriter();
             XmlWriter writer = XmlWriter.Create(sww);
-            serializer.Serialize(writer, output);
+            DataContractSerializer serializer = new DataContractSerializer(typeof(Library));
+            serializer.WriteObject(writer, output);
             string[] LibFile = sww.ToString().Split("\n");
 
             try

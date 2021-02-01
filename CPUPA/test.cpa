@@ -1,0 +1,11 @@
+data .var 1 0
+
+// This is a Comment
+
+define MAIN
+	NOP
+	MOV 0 A
+	ADD 2 A
+	ADD 3 A
+	MOV A .var
+end

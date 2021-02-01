@@ -8,7 +8,7 @@ namespace CPUPA
      * It is built during the assembly process, and is eventually serialized as XML to become the LIB file.
      * 
      */
-    class Library
+    public class Library
     {
         // this is the list of functions exposed by this library.
         // string is the function name, int is the index of the first instruction
@@ -42,6 +42,16 @@ namespace CPUPA
             internalAddresses = new Dictionary<int, int>();
             importedFunctions = new Dictionary<string, int>();
 
+        }
+
+        public Library()
+        {
+            isLibrary = false;
+            providedFunctions = new Dictionary<string, int>();
+            code = new List<Int32>();
+            internalVariables = new Dictionary<int, int>();
+            internalAddresses = new Dictionary<int, int>();
+            importedFunctions = new Dictionary<string, int>();
         }
     }
 }
