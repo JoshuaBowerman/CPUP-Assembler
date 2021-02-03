@@ -114,20 +114,20 @@ Switches:
             {
                 return int.Parse(e.Message);
             }
-            
+
+            output.fileName = outputLocation;
 
             //Write
-           
-            var sww = new StringWriter();
-            XmlWriter writer = XmlWriter.Create(sww);
-            DataContractSerializer serializer = new DataContractSerializer(typeof(Library));
-            serializer.WriteObject(writer, output);
-            string[] LibFile = sww.ToString().Split("\n");
 
+            FileStream writer = new FileStream(outputLocation, FileMode.Create);
+            DataContractSerializer ser;
             try
             {
-                File.WriteAllLines(outputLocation, LibFile);
-            }catch(Exception e)
+                ser = new DataContractSerializer(typeof(Library));
+                ser.WriteObject(writer, output);
+                writer.Close();
+            }
+            catch(Exception e)
             {
                 Console.WriteLine("Could not write output file: {0}", outputLocation);
                 Console.WriteLine(e.Message);

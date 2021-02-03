@@ -15,8 +15,8 @@ namespace CPUPA
             Dictionary<string, int> variables = new Dictionary<string, int>(); // The int is the variable id
             Dictionary<string, int> functions = new Dictionary<string, int>(); // int is the function id
             Dictionary<string, int> pointers = new Dictionary<string, int>(); // int is the pointer id
-            List<string> exposedFunctions = new List<string>();
-            List<string> importedFunctions = new List<string>();
+            Dictionary<string,int> exposedFunctions = new Dictionary<string, int>();
+            Dictionary<string,int> importedFunctions = new Dictionary<string, int>();
 
 
             //Step one is generating internal ID's for each variable and function.
@@ -34,7 +34,7 @@ namespace CPUPA
                         throw new Exception("-3");
                     }
                     //Register the variable ID
-                    variables.Add(input[i].Split(" ")[1], ObjectIndex++);
+                    variables.Add(input[i].Split(" ")[1], - ObjectIndex++);
                 }
                 //Registering Functions
                 if (input[i].StartsWith("define"))
@@ -45,8 +45,11 @@ namespace CPUPA
                         Console.WriteLine("Invalid Function Declaration: Name is missing or invalid. line:\n{0}", input[i]);
                         throw new Exception("-3");
                     }
-                    //Register the function ID
-                    functions.Add(input[i].Split(" ")[1], ObjectIndex++);
+                    //Register the function ID only if this function hasn't been registered yet.
+                    if(!functions.ContainsKey(input[i].Split(" ")[1]))
+                    {
+                        functions.Add(input[i].Split(" ")[1], -ObjectIndex++);
+                    }
                 }
                 //Registering External Functions
                 if (input[i].StartsWith("using"))
@@ -58,8 +61,22 @@ namespace CPUPA
                         throw new Exception("-3");
                     }
                     //Register the external function
-                    functions.Add(input[i].Split(" ")[1], ObjectIndex++);
-                    importedFunctions.Add(input[i].Split(" ")[1]);
+                    //This will be deduplicated later
+                    functions.Add(input[i].Split(" ")[1], - ObjectIndex++);
+                    importedFunctions.Add(input[i].Split(" ")[1], - (ObjectIndex - 1));
+                }
+                //Register Exposed Function
+                if (input[i].StartsWith("expose"))
+                {
+                    //make sure that there is no spaces and that there actually is a name.
+                    if (input[i].Split(' ').Length > 2 || input[i].Split(' ').Length == 1)
+                    {
+                        Console.WriteLine("Invalid External Function Declaration: Name is missing or invalid. line:\n{0}", input[i]);
+                        throw new Exception("-3");
+                    }
+                    //Register the exposed function
+                    functions.Add(input[i].Split(" ")[1], -ObjectIndex++);
+                    lib.providedFunctions.Add(input[i].Split(" ")[1], -(ObjectIndex - 1));
                 }
                 //Registering Address Pointers
                 if (input[i].StartsWith(":"))
@@ -233,6 +250,8 @@ namespace CPUPA
                         definingFunction = true;
                         functionName = line.Split(" ")[1];
                         functionStartIndex = lib.code.Count;
+
+                        lib.internalAddresses.Add(functions[functionName], functionStartIndex);
                     }
                 }
                 else //Defining a function
@@ -458,7 +477,8 @@ namespace CPUPA
 
                 }
             }
-
+            lib.importedFunctions = importedFunctions;
+            
 
             //If we are not a library we need to setup the jump at the beginning
             if (!isLib)

@@ -11,7 +11,7 @@ namespace CPUPA
     public class Library
     {
         // this is the list of functions exposed by this library.
-        // string is the function name, int is the index of the first instruction
+        // string is the function name, int  is the ID
         public Dictionary<string, int> providedFunctions;
 
         // this is the list of used functions from other libraries.
@@ -21,7 +21,7 @@ namespace CPUPA
         //these are the instructions that make up the program positive values are regular, negative values are memory addresses
         public List<Int32> code;
 
-        //These are the variables(memory locations) used by the program. first int being the value used in the code above, second being the size in words.
+        //These are the variables(memory locations) used by the program. first int being the value used in the code above, second being the location.
         //The linker only needs to worry about attached memory locations.
         public Dictionary<int, int> internalVariables;
 
@@ -32,6 +32,10 @@ namespace CPUPA
         //Whether or not this was compiled as a library or a regular program.
         //non library programs are expected to have the main function at address 0
         public bool isLibrary;
+
+        //This is useful for the linker.
+        //It lets it know the filename of the Library produced before anything was renamed.
+        public string fileName = "";
 
         public Library(bool isLib)
         {
