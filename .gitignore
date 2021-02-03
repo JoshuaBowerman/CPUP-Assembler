@@ -2,3 +2,16 @@ bin/
 *.dll
 *.pdb
 .vs/
+.vs/CPUP BuildTools/DesignTimeBuild/.dtbcache
+.vs/CPUP BuildTools/v16/.suo
+.vs/CPUP BuildTools/v16/Server/sqlite3/storage.ide
+CPUPA/bin/Debug/netcoreapp2.1/CPUPA.dll
+*.pdb
+CPUPA/bin/Debug/netcoreapp2.1/out.lib
+CPUPA/bin/Debug/netcoreapp2.1/test.cpa
+CPUPA/obj/Debug/netcoreapp2.1/CPUPA.csprojAssemblyReference.cache
+CPUPA/obj/Debug/netcoreapp2.1/CPUPA.dll
+CPUPA/obj/Debug/netcoreapp2.1/CPUPA.pdb
+CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csproj.CoreCompileInputs.cache
+CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csproj.FileListAbsolute.txt
+CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csprojAssemblyReference.cache
