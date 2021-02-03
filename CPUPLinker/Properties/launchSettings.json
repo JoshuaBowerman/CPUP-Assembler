@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CPUPLinker": {
+      "commandName": "Project",
+      "commandLineArgs": "-mif -of=\"out.mif\" test.lib"
+    }
+  }
+}
