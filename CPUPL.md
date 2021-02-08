@@ -20,3 +20,6 @@ Value | Meaning
 -1 | Invalid Switch
 -2 | Cannot find input file.
 -3 | More Than One Program File Found(Files containing a main function)
+-4 | Could not find function to use for import
+-5 | Could not read .lib file
+-6 | Could not write output file
