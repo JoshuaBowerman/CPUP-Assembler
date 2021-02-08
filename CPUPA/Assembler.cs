@@ -11,7 +11,7 @@ namespace CPUPA
         {
             //Important Variables that will be used throughout
             Library lib = new Library(isLib);
-            int ObjectIndex = 0; //This is used to keep track of which IDs have been used. Using one counter ensures that function id's and variable id's do not collide. This makes it easier later.
+            int ObjectIndex = 1; //This is used to keep track of which IDs have been used. Using one counter ensures that function id's and variable id's do not collide. This makes it easier later.
             Dictionary<string, int> variables = new Dictionary<string, int>(); // The int is the variable id
             Dictionary<string, int> functions = new Dictionary<string, int>(); // int is the function id
             Dictionary<string, int> pointers = new Dictionary<string, int>(); // int is the pointer id

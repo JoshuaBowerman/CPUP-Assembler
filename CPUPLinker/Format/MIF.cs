@@ -26,6 +26,7 @@ namespace CPUPLinker.Format
 
             for (ushort i = 0; i < machineCode.Length; i++)
             {
+                
                 file += "   " + UShortToBin(i) + " : " + UShortToBin(machineCode[i]) + ";\n";
             }
 
@@ -39,7 +40,7 @@ namespace CPUPLinker.Format
                 }
                 else
                 {
-                    file += "   [" + UShortToBin((ushort)machineCode.Length) + ".." + UShortToBin(28000) + "]  :  " + UShortToBin(0) + ";\n";
+                    file += "   [" + UShortToBin((ushort)machineCode.Length) + ".." + UShortToBin(27999) + "]  :  " + UShortToBin(0) + ";\n";
                 }
             }
             file += "END;";

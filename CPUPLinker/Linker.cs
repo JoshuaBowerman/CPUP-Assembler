@@ -93,7 +93,7 @@ namespace CPUPLinker
                     translationTable.Add(entry.Key, -IDIndex);
 
                     // Master Address Table entry
-                    masterAddressTable.Add(-IDIndex, (ushort)((ushort)entry.Key + offset));
+                    masterAddressTable.Add(-IDIndex, (ushort)(lib.internalAddresses[entry.Key] + offset));
 
                     //Increment IDIndex
                     IDIndex++;
@@ -181,7 +181,7 @@ namespace CPUPLinker
             //Transfer Integer Array to Ushort machinecode
             for(int i = 0; i < workingMachineCode.Count; i++)
             {
-                machineCode.Add(unchecked((ushort)workingMachineCode[0]));
+                machineCode.Add(unchecked((ushort)workingMachineCode[i]));
             }
         }
 
