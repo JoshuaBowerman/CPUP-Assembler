@@ -101,6 +101,11 @@ namespace CPUPA
              * 
              */
             Console.WriteLine("    Generating Machine Code");
+
+            //Allocate NOP
+            lib.code.Add(0);
+
+
             //Allocate main jump if required
             if (!isLib)
             {
@@ -489,8 +494,8 @@ namespace CPUPA
                 instruction += (ushort)(Tables.instructionTable["JMP"] << 12);
                 instruction += (ushort)(Tables.typeTable["REG"] << 10);
                 instruction += 2; //attached data
-                lib.code[0] = instruction;
-                lib.code[1] = functionID;
+                lib.code[1] = instruction;
+                lib.code[2] = functionID;
             }
             return lib;
         }
