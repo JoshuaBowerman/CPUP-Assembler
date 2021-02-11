@@ -1,0 +1,14 @@
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\hostpolicy.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\hostfxr.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.exe
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\test.cpa
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.deps.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.runtimeconfig.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.runtimeconfig.dev.json
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.pdb
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.AssemblyInfo.cs
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.dll
+C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.pdb

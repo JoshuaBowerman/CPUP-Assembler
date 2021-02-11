@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPLinker\\CPUPLinker.csproj": {}
+    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPuild.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPLinker\\CPUPLinker.csproj": {
+    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPuild.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPLinker\\CPUPLinker.csproj",
-        "projectName": "CPUPLinker",
-        "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPLinker\\CPUPLinker.csproj",
+        "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPuild.csproj",
+        "projectName": "CPUPuild",
+        "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPuild.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPLinker\\obj\\",
+        "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,7 +43,7 @@
           "dependencies": {
             "Microsoft.NETCore.App": {
               "target": "Package",
-              "version": "[2.1.11, )",
+              "version": "[2.1.0, )",
               "autoReferenced": true
             }
           },
@@ -52,11 +52,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "win10-x64": {
-          "#import": []
         }
       }
     }

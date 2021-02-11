@@ -1424,11 +1424,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
-      "projectName": "CPUPA",
-      "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
+      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPBuild.csproj",
+      "projectName": "CPUPBuild",
+      "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\CPUPBuild.csproj",
       "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\obj\\",
+      "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPuild\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
