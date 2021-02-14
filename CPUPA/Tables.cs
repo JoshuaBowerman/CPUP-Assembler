@@ -120,8 +120,15 @@ namespace CPUPA
                 "MOV P [ST]",
                 "JMP $$",
                 "NOP",
-                "MOV [.CPUPA.TEMP] A"
-            } }
-        };
+                "MOV [.CPUPA.TEMP] A" }
+            },
+            {"SIN", new List<string>(){
+                "JMP :CPUPA.HLT"
+
+            }},
+            { "SOUT", new List<string>(){
+                "JMP :CPUPA.HLT"
+
+             } } };
     }
 }
