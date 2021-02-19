@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Microsoft.NETCore.App/2.1.11": {
+      "Microsoft.NETCore.App/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostPolicy": "2.1.11",
-          "Microsoft.NETCore.Platforms": "2.1.4",
+          "Microsoft.NETCore.DotNetHostPolicy": "2.1.25",
+          "Microsoft.NETCore.Platforms": "2.1.12",
           "Microsoft.NETCore.Targets": "2.0.0",
           "NETStandard.Library": "2.0.3"
         },
@@ -160,22 +160,22 @@
           "build/netcoreapp2.1/Microsoft.NETCore.App.targets": {}
         }
       },
-      "Microsoft.NETCore.DotNetAppHost/2.1.11": {
+      "Microsoft.NETCore.DotNetAppHost/2.1.25": {
         "type": "package"
       },
-      "Microsoft.NETCore.DotNetHostPolicy/2.1.11": {
+      "Microsoft.NETCore.DotNetHostPolicy/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostResolver": "2.1.11"
+          "Microsoft.NETCore.DotNetHostResolver": "2.1.25"
         }
       },
-      "Microsoft.NETCore.DotNetHostResolver/2.1.11": {
+      "Microsoft.NETCore.DotNetHostResolver/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetAppHost": "2.1.11"
+          "Microsoft.NETCore.DotNetAppHost": "2.1.25"
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.4": {
+      "Microsoft.NETCore.Platforms/2.1.12": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -210,14 +210,14 @@
       }
     },
     ".NETCoreApp,Version=v2.1/win10-x64": {
-      "Microsoft.NETCore.App/2.1.11": {
+      "Microsoft.NETCore.App/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostPolicy": "2.1.11",
-          "Microsoft.NETCore.Platforms": "2.1.4",
+          "Microsoft.NETCore.DotNetHostPolicy": "2.1.25",
+          "Microsoft.NETCore.Platforms": "2.1.12",
           "Microsoft.NETCore.Targets": "2.0.0",
           "NETStandard.Library": "2.0.3",
-          "runtime.win-x64.Microsoft.NETCore.App": "2.1.11"
+          "runtime.win-x64.Microsoft.NETCore.App": "2.1.25"
         },
         "compile": {
           "ref/netcoreapp2.1/Microsoft.CSharp.dll": {},
@@ -369,27 +369,27 @@
           "build/netcoreapp2.1/Microsoft.NETCore.App.targets": {}
         }
       },
-      "Microsoft.NETCore.DotNetAppHost/2.1.11": {
+      "Microsoft.NETCore.DotNetAppHost/2.1.25": {
         "type": "package",
         "dependencies": {
-          "runtime.win-x64.Microsoft.NETCore.DotNetAppHost": "2.1.11"
+          "runtime.win-x64.Microsoft.NETCore.DotNetAppHost": "2.1.25"
         }
       },
-      "Microsoft.NETCore.DotNetHostPolicy/2.1.11": {
+      "Microsoft.NETCore.DotNetHostPolicy/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostResolver": "2.1.11",
-          "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy": "2.1.11"
+          "Microsoft.NETCore.DotNetHostResolver": "2.1.25",
+          "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy": "2.1.25"
         }
       },
-      "Microsoft.NETCore.DotNetHostResolver/2.1.11": {
+      "Microsoft.NETCore.DotNetHostResolver/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetAppHost": "2.1.11",
-          "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver": "2.1.11"
+          "Microsoft.NETCore.DotNetAppHost": "2.1.25",
+          "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver": "2.1.25"
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.4": {
+      "Microsoft.NETCore.Platforms/2.1.12": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -422,7 +422,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win-x64.Microsoft.NETCore.App/2.1.11": {
+      "runtime.win-x64.Microsoft.NETCore.App/2.1.25": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -633,34 +633,34 @@
           "runtimes/win-x64/native/coreclr.dll": {},
           "runtimes/win-x64/native/dbgshim.dll": {},
           "runtimes/win-x64/native/mscordaccore.dll": {},
-          "runtimes/win-x64/native/mscordaccore_amd64_amd64_4.6.27617.04.dll": {},
+          "runtimes/win-x64/native/mscordaccore_amd64_amd64_4.6.29719.03.dll": {},
           "runtimes/win-x64/native/mscordbi.dll": {},
           "runtimes/win-x64/native/mscorrc.debug.dll": {},
           "runtimes/win-x64/native/mscorrc.dll": {},
           "runtimes/win-x64/native/sos.dll": {},
-          "runtimes/win-x64/native/sos_amd64_amd64_4.6.27617.04.dll": {},
+          "runtimes/win-x64/native/sos_amd64_amd64_4.6.29719.03.dll": {},
           "runtimes/win-x64/native/ucrtbase.dll": {}
         }
       },
-      "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/2.1.11": {
+      "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/2.1.25": {
         "type": "package",
         "native": {
           "runtimes/win-x64/native/apphost.exe": {}
         }
       },
-      "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy/2.1.11": {
+      "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostResolver": "2.1.11"
+          "Microsoft.NETCore.DotNetHostResolver": "2.1.25"
         },
         "native": {
           "runtimes/win-x64/native/hostpolicy.dll": {}
         }
       },
-      "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver/2.1.11": {
+      "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver/2.1.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.DotNetAppHost": "2.1.11"
+          "Microsoft.NETCore.DotNetAppHost": "2.1.25"
         },
         "native": {
           "runtimes/win-x64/native/hostfxr.dll": {}
@@ -669,10 +669,10 @@
     }
   },
   "libraries": {
-    "Microsoft.NETCore.App/2.1.11": {
-      "sha512": "SFKaL2w4qxruT9mlu0uSaFiNOA7hZRhf6q0B+r8pAsx4Jn2hhf9XZ1Fg+nz2e9uz2tNZt5/A2B+fE7sxIyUE6w==",
+    "Microsoft.NETCore.App/2.1.25": {
+      "sha512": "Zqvq+eLDAnSAI9T6SNkAsd7FJ5VTIxIs/G+dsaWxnCqSQfYhPOO9TwuvGjpDZPNsmDGdSGY92p9ln1GGjWmy0Q==",
       "type": "package",
-      "path": "microsoft.netcore.app/2.1.11",
+      "path": "microsoft.netcore.app/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -682,7 +682,7 @@
         "build/netcoreapp2.1/Microsoft.NETCore.App.PlatformManifest.txt",
         "build/netcoreapp2.1/Microsoft.NETCore.App.props",
         "build/netcoreapp2.1/Microsoft.NETCore.App.targets",
-        "microsoft.netcore.app.2.1.11.nupkg.sha512",
+        "microsoft.netcore.app.2.1.25.nupkg.sha512",
         "microsoft.netcore.app.nuspec",
         "ref/netcoreapp/_._",
         "ref/netcoreapp2.1/Microsoft.CSharp.dll",
@@ -935,59 +935,59 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.DotNetAppHost/2.1.11": {
-      "sha512": "yQEPhVkhS35CskOclD6ej3WtAuEIr6FeUEQtBRMNgB/8BsXuozDTBNwbm/ODmG47LKiDcS9J93PHn2EI4bqTZg==",
+    "Microsoft.NETCore.DotNetAppHost/2.1.25": {
+      "sha512": "jd0etmRkwLa7sIplANnjpn5vczthh8rkYwjU5XmOS2Cu90CB5yCwSL6x/2VcAC5Uc8Yq1Q3AXSExOGegejsz2A==",
       "type": "package",
-      "path": "microsoft.netcore.dotnetapphost/2.1.11",
+      "path": "microsoft.netcore.dotnetapphost/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.dotnetapphost.2.1.11.nupkg.sha512",
+        "microsoft.netcore.dotnetapphost.2.1.25.nupkg.sha512",
         "microsoft.netcore.dotnetapphost.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.DotNetHostPolicy/2.1.11": {
-      "sha512": "7c5SU1NYvljgia5QAuaPyuxfFvURiFddxhy+O4GfVS6i6mv3+C/abYzvoVXSHzlW3G048oMe9T9AYWd2wUKdxw==",
+    "Microsoft.NETCore.DotNetHostPolicy/2.1.25": {
+      "sha512": "A2EdJGH13mzabtTOVSsPJGKLk0FGZcTXePcwy94H9q5PMuDJ0XbyyIU8Mwb337rvB/8xCgYNrFM0OlccyjSp8w==",
       "type": "package",
-      "path": "microsoft.netcore.dotnethostpolicy/2.1.11",
+      "path": "microsoft.netcore.dotnethostpolicy/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.dotnethostpolicy.2.1.11.nupkg.sha512",
+        "microsoft.netcore.dotnethostpolicy.2.1.25.nupkg.sha512",
         "microsoft.netcore.dotnethostpolicy.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.DotNetHostResolver/2.1.11": {
-      "sha512": "J7GgmVTiwg9QnOJbANhm3KGQN8AWwsESeKL/s33y1rvdgTL7T71HVSY0FbL1fAeQZJ/1GUHOTBKmYXQLSZ73jA==",
+    "Microsoft.NETCore.DotNetHostResolver/2.1.25": {
+      "sha512": "DU2JNr3ubypizT5fB6ynWuAme5j2jCx8bL2d92VhnACfmTxBfEBcuL5l3tmmFrzQtDQptPK/IUQjaEAVH2igFA==",
       "type": "package",
-      "path": "microsoft.netcore.dotnethostresolver/2.1.11",
+      "path": "microsoft.netcore.dotnethostresolver/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.dotnethostresolver.2.1.11.nupkg.sha512",
+        "microsoft.netcore.dotnethostresolver.2.1.25.nupkg.sha512",
         "microsoft.netcore.dotnethostresolver.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.4": {
-      "sha512": "KA9gm+dY8vOkUxAU9dypnFVyuqYuE4pPkLrBEjdttJ0RlyQtHnxmPl0pgOgJkBCg0uIO2OTRooDIniXFmPmkFw==",
+    "Microsoft.NETCore.Platforms/2.1.12": {
+      "sha512": "TVZ/a86Pcu1XngiqBMFEf5rZNv0erQ+FmGYrolRIMVtSeihOttbpyZhahmYfcxYcsmKzoUZDk1k90zbnav/PAA==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.4",
+      "path": "microsoft.netcore.platforms/2.1.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.4.nupkg.sha512",
+        "microsoft.netcore.platforms.2.1.12.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -1139,10 +1139,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "runtime.win-x64.Microsoft.NETCore.App/2.1.11": {
-      "sha512": "SLFEer3CUH92eeyxHO3P9rNMpYnFdr6cZ4KztLDIaKB4Gwfk1L4jTK8obRfATVy7ZviZEBFzsSfa2FDoZisVww==",
+    "runtime.win-x64.Microsoft.NETCore.App/2.1.25": {
+      "sha512": "ducTsxIqaU9CJuH9YIhMvuy5BHNtp3UT+yBUyKB0LJVyDGPnstGsD7+/8NxK1dRuYxCM5tOBaEal6R/0idweCQ==",
       "type": "package",
-      "path": "runtime.win-x64.microsoft.netcore.app/2.1.11",
+      "path": "runtime.win-x64.microsoft.netcore.app/2.1.25",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1151,7 +1151,7 @@
         "Microsoft.NETCore.App.versions.txt",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win-x64.microsoft.netcore.app.2.1.11.nupkg.sha512",
+        "runtime.win-x64.microsoft.netcore.app.2.1.25.nupkg.sha512",
         "runtime.win-x64.microsoft.netcore.app.nuspec",
         "runtimes/win-x64/lib/netcoreapp2.1/Microsoft.CSharp.dll",
         "runtimes/win-x64/lib/netcoreapp2.1/Microsoft.VisualBasic.dll",
@@ -1356,56 +1356,56 @@
         "runtimes/win-x64/native/coreclr.dll",
         "runtimes/win-x64/native/dbgshim.dll",
         "runtimes/win-x64/native/mscordaccore.dll",
-        "runtimes/win-x64/native/mscordaccore_amd64_amd64_4.6.27617.04.dll",
+        "runtimes/win-x64/native/mscordaccore_amd64_amd64_4.6.29719.03.dll",
         "runtimes/win-x64/native/mscordbi.dll",
         "runtimes/win-x64/native/mscorrc.debug.dll",
         "runtimes/win-x64/native/mscorrc.dll",
         "runtimes/win-x64/native/sos.dll",
-        "runtimes/win-x64/native/sos_amd64_amd64_4.6.27617.04.dll",
+        "runtimes/win-x64/native/sos_amd64_amd64_4.6.29719.03.dll",
         "runtimes/win-x64/native/ucrtbase.dll",
         "tools/crossgen.exe"
       ]
     },
-    "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/2.1.11": {
-      "sha512": "JWTOqzBGAvzfY6zHs8+Sye7eV8uJJ+piODtiDQM+H2YvpGzUV2pT5/5EgtIjiVgj29zmD0/fQnXvytInVk9qgg==",
+    "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/2.1.25": {
+      "sha512": "w76lA1ETgm3DxjhQI8kPWm35Osej1A1+YlY+g3MlIRqHrHJooNpSKi0ED+a8BNYI0cBIfTHU+95bQ0967AfonQ==",
       "type": "package",
-      "path": "runtime.win-x64.microsoft.netcore.dotnetapphost/2.1.11",
+      "path": "runtime.win-x64.microsoft.netcore.dotnetapphost/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.win-x64.microsoft.netcore.dotnetapphost.2.1.11.nupkg.sha512",
+        "runtime.win-x64.microsoft.netcore.dotnetapphost.2.1.25.nupkg.sha512",
         "runtime.win-x64.microsoft.netcore.dotnetapphost.nuspec",
         "runtimes/win-x64/native/apphost.exe",
         "version.txt"
       ]
     },
-    "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy/2.1.11": {
-      "sha512": "oItf0+yrSAJaTfSv7rK7gqJraHnPNvQwcPfDB28Dl7S9iQnRRljxO9VTgLYyytz45tpwgogqnRzIrq2B+Stmrg==",
+    "runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy/2.1.25": {
+      "sha512": "p/oDZ5U3YKhtfLEAiQKVwpN87z71AxdpVt6c9zWhGR4aH9nHx6Xy9Y5PPfckeCCBQGpNm9b3jlSk0PVvd4JMaA==",
       "type": "package",
-      "path": "runtime.win-x64.microsoft.netcore.dotnethostpolicy/2.1.11",
+      "path": "runtime.win-x64.microsoft.netcore.dotnethostpolicy/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.win-x64.microsoft.netcore.dotnethostpolicy.2.1.11.nupkg.sha512",
+        "runtime.win-x64.microsoft.netcore.dotnethostpolicy.2.1.25.nupkg.sha512",
         "runtime.win-x64.microsoft.netcore.dotnethostpolicy.nuspec",
         "runtimes/win-x64/native/hostpolicy.dll",
         "version.txt"
       ]
     },
-    "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver/2.1.11": {
-      "sha512": "YlWwH88Iztst0KnGiyLc481dCeV6TXNDrQ8dnvkttFSXtx8mFKBvoZfldGl3sG9JcCX2obft9PkBYTTghmQqzQ==",
+    "runtime.win-x64.Microsoft.NETCore.DotNetHostResolver/2.1.25": {
+      "sha512": "enZURTrXekjA/NPCrJ6MJ1OK3GM5D1Uf69X7kDeCGDCqTeT8GBaiErgM40tS09HfSfZjAM/MF2bNkumfmkapGQ==",
       "type": "package",
-      "path": "runtime.win-x64.microsoft.netcore.dotnethostresolver/2.1.11",
+      "path": "runtime.win-x64.microsoft.netcore.dotnethostresolver/2.1.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.win-x64.microsoft.netcore.dotnethostresolver.2.1.11.nupkg.sha512",
+        "runtime.win-x64.microsoft.netcore.dotnethostresolver.2.1.25.nupkg.sha512",
         "runtime.win-x64.microsoft.netcore.dotnethostresolver.nuspec",
         "runtimes/win-x64/native/hostfxr.dll",
         "version.txt"
@@ -1414,25 +1414,21 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.11"
+      "Microsoft.NETCore.App >= 2.1.25"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Josh\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Josh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
+      "projectUniqueName": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj",
       "projectName": "CPUPA",
-      "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
+      "projectPath": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj",
       "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\obj\\",
+      "outputPath": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1446,6 +1442,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {}
         }
       },
@@ -1457,18 +1454,26 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.11, )",
+            "version": "[2.1.25, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

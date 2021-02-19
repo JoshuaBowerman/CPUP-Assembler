@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj": {}
+    "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj": {
+    "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
+        "projectUniqueName": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj",
         "projectName": "CPUPA",
-        "projectPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\CPUPA.csproj",
+        "projectPath": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\CPUPA.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh\\source\\repos\\CPUP Assembler\\CPUPA\\obj\\",
+        "outputPath": "C:\\Users\\Josh\\Documents\\GitHub\\CPUP-BuildTools\\CPUPA\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           }
         },
@@ -40,18 +38,26 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.11, )",
+              "version": "[2.1.25, )",
               "autoReferenced": true
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

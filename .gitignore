@@ -22,3 +22,6 @@ CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csprojAssemblyReference.cache
 *.exe
 *.cache
 *.txt
+CPUPA/obj/Debug/netcoreapp2.1/win10-x64/.NETCoreApp,Version=v2.1.AssemblyAttributes.cs
+CPUPA/obj/CPUPA.csproj.nuget.dgspec.json
+*.props
