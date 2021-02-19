@@ -15,3 +15,10 @@ CPUPA/obj/Debug/netcoreapp2.1/CPUPA.pdb
 CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csproj.CoreCompileInputs.cache
 CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csproj.FileListAbsolute.txt
 CPUPLinker/obj/Debug/netcoreapp2.1/CPUPLinker.csprojAssemblyReference.cache
+.vs/CPUP BuildTools/v16/.suo
+*.json
+*.props
+*.targets
+*.exe
+*.cache
+*.txt
