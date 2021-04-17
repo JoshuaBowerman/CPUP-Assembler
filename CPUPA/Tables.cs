@@ -130,6 +130,10 @@ namespace CPUPA
                 "MV $$ IO",
                 "COM 2"
 
-             } } };
+             } },
+            { "JNE", new List<string>(){
+                "JL $$",
+                "JG $$"
+            }}};
     }
 }
