@@ -33,6 +33,18 @@ If you define
 `:abcd`
 You later could
 `JMP :abcd`
+
+## Shorthand For Small Jumps
+
+**This is not recommended and can break your program in wierd ways**
+if you just want to jump over a line or back a few instructions you can use the following. it is not recommended however and was only implemented for use in translated instructions.
+**NOTE: This will not work if trying to jump over translated instructions.**
+
+Jump fowards two instructions:
+`JMP @+2`
+Jump back two instructions:
+`JMP @-2`
+
 ## Data
 to define a data address you use the following syntax
 `data .name size  value`
