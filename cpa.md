@@ -60,4 +60,39 @@ If you wanted to use the `write` function of a library you intend to link later 
 
 To use a function you would write `Call name`
 
+## Instructions
 
+The following two lists contain all the instructions supported. They are split into two lists because the translated instructions are not actually supported by the cpu but are instead converted into a few instructions that do the same thing.
+
+### Native Instructions
+
+Intructions | Description
+----------- | -----------
+NOP | Do nothing for 1 cycle.
+MOV | Move data from arg1 to arg2
+JMP | Move to the passed address and begin execution
+JE | Used with `CMP`, jump if equal.
+JL | Jump if less than.
+JG | Jump if greater.
+JLE | Jump if less or equals.
+JGE | Jump if greater or equals.
+ADD | ADD two numbers, result is placed in second argument
+SUB | Subract arg1 from arg2, arg2 = result
+MUL | arg2 = arg1 * arg2
+DIV | arg2 = arg2 / arg1
+COM | See [IO Control Unit](https://github.com/JoshuaBowerman/CPUP/blob/main/io.md)
+JER | Jump if there is an error bit set.
+MOD | arg2 = arg2 mod arg1
+
+### Translated Instructions
+
+Intructions | Description
+----------- | -----------
+PUSH | Push a value onto the stack
+POP | Pop a value off of the stack
+INC | Increment Register (ONLY WORKS WITH REGISTERS)
+DEC | Decrement Register (ONLY WORKS WITH REGISTERS)
+CALL | Call a function
+SIN | Serial Input 1 byte (Will wait for byte)
+SOUT | Serial Output 1 byte (Will wait if buffer is full)
+JNE | Jump if not equals.
