@@ -123,10 +123,16 @@ namespace CPUPA
                 "MOV [.CPUPA.TEMP] A" }
             },
             {"SIN", new List<string>(){
+                "COM 0",
+                "CMP IO 0",
+                "JE @-2",
                 "COM 3",
                 "MV IO $$"
             }},
             { "SOUT", new List<string>(){
+                "COM 1",,
+                "CMP IO 0",
+                "JE @-2",
                 "MV $$ IO",
                 "COM 2"
 
