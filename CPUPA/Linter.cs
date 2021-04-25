@@ -12,7 +12,7 @@ namespace CPUPA
             return Lint(new List<string>(file),stackSize,isLib).ToArray();
         }
 
-        private static int internalIDIndex = 0
+        private static int internalIDIndex = 0;
         public static List<string> Lint(List<string> file, int stackSize,bool isLib)
         {
             List<string> data = file;
@@ -116,19 +116,19 @@ namespace CPUPA
             }
 
             //Handle @+/- 
-            for(int i = 0 i < data.Count;i++){
+            for(int i = 0; i < data.Count;i++){
                 if(data[i].Trim().Contains("@+") && !data[i].Contains("\"")){
                     //Ahead
-                    int v = int.Parse(System.Text.RegularExpressions.Regex.Match(data[i].Trim(),"\@\+([0-9]+)").Groups[0])
+                    int v = int.Parse(System.Text.RegularExpressions.Regex.Match(data[i].Trim(), "@\\+([0-9]+)").Groups[0].Value.Substring(2));
                     string label = ":CPUPA.INTERNAL_JUMP_" + internalIDIndex++;
-                    data[i] = data[i].Replace("@+" + v,label)
+                    data[i] = data[i].Replace("@+" + v, label);
                     data.Insert(i + v, label);
                 }
                 if(data[i].Trim().Contains("@-")&& !data[i].Contains("\"")){
                     //Behind
-                    int v = int.Parse(System.Text.RegularExpressions.Regex.Match(data[i].Trim(),"\@\-([0-9]+)").Groups[0])
+                    int v = int.Parse(System.Text.RegularExpressions.Regex.Match(data[i].Trim(), "@\\-([0-9]+)").Groups[0].Value.Substring(2));
                     string label = ":CPUPA.INTERNAL_JUMP_" + internalIDIndex++;
-                    data[i] = data[i].Replace("@-" + v,label)
+                    data[i] = data[i].Replace("@-" + v, label);
 
                     data.Insert(i - v, label);
                 }
