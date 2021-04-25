@@ -28,3 +28,7 @@ CPUPA/obj/CPUPA.csproj.nuget.dgspec.json
 *.cache
 CPUPLinker/obj/Debug/netcoreapp2.1/win10-x64/CPUPLinker.csproj.FileListAbsolute.txt
 *.cache
+CPUPA/obj/Debug/netcoreapp2.1/win10-x64/CPUPA.csproj.FileListAbsolute.txt
+CPUPLinker/obj/Debug/netcoreapp2.1/win10-x64/CPUPLinker.csproj.FileListAbsolute.txt
+CPUPuild/obj/Debug/netcoreapp2.1/win10-x64/CPUPBuild.csproj.CoreCompileInputs.cache
+CPUPLinker/obj/Debug/netcoreapp2.1/win10-x64/CPUPLinker.csproj.CoreCompileInputs.cache
