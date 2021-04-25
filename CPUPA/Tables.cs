@@ -114,6 +114,10 @@ namespace CPUPA
             {
                 "SUB 1 $$" }
             },
+            {"CMP", new List<string>()
+            {
+                "SUB $$ %%" }
+            },
             {"CALL", new List<string>()
             {
                 "ADD 1 ST",
@@ -130,8 +134,8 @@ namespace CPUPA
                 "MV IO $$"
             }},
             { "SOUT", new List<string>(){
-                "COM 1",,
-                "CMP IO 0",
+                "COM 1",
+                "SUB IO 0",
                 "JE @-2",
                 "MV $$ IO",
                 "COM 2"
