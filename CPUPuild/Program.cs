@@ -16,8 +16,8 @@ namespace CPUPuild
                 return 0;
             }
 
-            string linker = @"C:\Users\Josh\source\repos\CPUP Assembler\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.exe";
-            string assembler = @"C:\Users\Josh\source\repos\CPUP Assembler\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.exe";
+            string linker = @"C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.exe";
+            string assembler = @"C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.exe";
             string projectDir = args[0];
             if (!projectDir.EndsWith("\\"))
             {
@@ -26,8 +26,8 @@ namespace CPUPuild
             FileInfo[] files;
             try
             {
-                DirectoryInfo d = new DirectoryInfo(args[0]);
-                files = d.GetFiles("*.cpa");
+                DirectoryInfo di = new DirectoryInfo(args[0]);
+                files = di.GetFiles("*.cpa");
             }
             catch (Exception e)
             {
@@ -72,16 +72,15 @@ namespace CPUPuild
                 }
                 assemblerArgs += " \"" + file.FullName + "\" \"" + projectDir + "build\\libs\\" + file.Name + ".lib\"";
 
-                Process p = new Process();
-                p.StartInfo.UseShellExecute = false;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.FileName = assembler;
-                p.StartInfo.Arguments = assemblerArgs;
+                Process pr = new Process();
+                pr.StartInfo.UseShellExecute = false;
+                pr.StartInfo.RedirectStandardOutput = true;
+                pr.StartInfo.FileName = assembler;
+                pr.StartInfo.Arguments = assemblerArgs;
                 Console.WriteLine("Assembling File: {0}", file.Name);
-                p.Start();
-                string output = p.StandardOutput.ReadToEnd();
-                p.WaitForExit();
-                Console.WriteLine(output);
+                pr.Start();
+                pr.WaitForExit();
+                Console.WriteLine(pr.StandardOutput.ReadToEnd());
             }
             DirectoryInfo d = new DirectoryInfo(projectDir + @"build\libs\");
             files = d.GetFiles("*.lib");
