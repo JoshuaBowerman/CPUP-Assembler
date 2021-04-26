@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <StartupObject>CPUPA.Program</StartupObject>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

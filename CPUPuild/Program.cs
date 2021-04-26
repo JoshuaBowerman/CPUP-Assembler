@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -11,14 +12,75 @@ namespace CPUPuild
             Console.WriteLine("CPUP Build");
             if(args.Length < 1)
             {
-                Console.WriteLine("Usage: CPUPBuild.exe <Project Folder>\nWill Compile and Link all cpa files in project.");
+                Console.WriteLine(@"CPUP Build Tool
+===============
+Builds a program out of the files in a folder. looks through each file for a main function and uses that as the program file and compiles the rest as libraries.
+
+Usage: CPUPBuild.exe <Options> <Project Folder>
+
+    Options
+===============
+
+-v      | Verbose Mode
+-ss=##  | Sets the stack size, eg: -ss=4096
+
+");
 
                 return 0;
             }
 
             string linker = @"C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.exe";
             string assembler = @"C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\bin\Debug\netcoreapp2.1\win10-x64\CPUPA.exe";
-            string projectDir = args[0];
+            string projectDir = "";
+            List<String> switches = new List<String>();
+
+            //Find the project dir and seperate the switches
+            for(int i = 0; i < args.Length; i++)
+            {
+                if (!args[i].StartsWith("-"))
+                {
+                    if(projectDir != "")
+                    {
+                        //too many folder arguments.
+                        Console.WriteLine("ERROR: More than 1 project directory provided. Got\n1: \"{0}\"\n2: \"{1}\"", projectDir, args[i]);
+                        return -15;
+                    }
+                    projectDir = args[i];
+                }
+                else
+                {
+                    switches.Add(args[i]);
+                }
+            }
+
+            //Options
+            bool isVerbose = false;
+            int stackSize = 4096;
+
+            //switches
+            foreach(string entry in switches)
+            {
+                switch (entry.Split("=")[0])
+                {
+                    case "-v":
+                        isVerbose = true;
+                        break;
+                    case "-ss":
+                        try
+                        {
+                            stackSize = int.Parse(entry.Split("=")[1]);
+                        }catch(Exception e)
+                        {
+                            Console.WriteLine("ERROR: Could not parse stack size. At: {0}", entry);
+                            return -16;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("ERROR: Unknown Swtich: {0}", entry);
+                        return -16;
+                }
+            }
+
             if (!projectDir.EndsWith("\\"))
             {
                 projectDir += "\\";
@@ -70,6 +132,16 @@ namespace CPUPuild
                 {
                     assemblerArgs += "-lib";
                 }
+                else
+                {
+                    assemblerArgs += "-ss=" + stackSize;
+                }
+
+                if (isVerbose)
+                {
+                    assemblerArgs += " -v";
+                }
+
                 assemblerArgs += " \"" + file.FullName + "\" \"" + projectDir + "build\\libs\\" + file.Name + ".lib\"";
 
                 Process pr = new Process();
@@ -86,7 +158,9 @@ namespace CPUPuild
             files = d.GetFiles("*.lib");
 
             string linkArgs = "-of=\""+projectDir + @"\build\program.mif" + "\"";
-            foreach(var file in files)
+            if (isVerbose)
+                linkArgs += " -v";
+            foreach (var file in files)
             {
                 linkArgs += " \"" + file.FullName + "\""; 
             }

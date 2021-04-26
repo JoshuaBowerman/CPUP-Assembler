@@ -12,3 +12,19 @@ C:\Users\Josh\source\repos\CPUP Assembler\CPUPLinker\obj\Debug\netcoreapp2.1\win
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.AssemblyInfo.cs
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.dll
 C:\Users\Josh\source\repos\CPUP Assembler\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.pdb
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\hostpolicy.dll
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\hostfxr.dll
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.exe
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\test.lib
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.deps.json
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.runtimeconfig.json
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.runtimeconfig.dev.json
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.dll
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\bin\Debug\netcoreapp2.1\win10-x64\CPUPLinker.pdb
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.csprojAssemblyReference.cache
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.AssemblyInfoInputs.cache
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.AssemblyInfo.cs
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.csproj.CoreCompileInputs.cache
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.dll
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.pdb
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPLinker\obj\Debug\netcoreapp2.1\win10-x64\CPUPLinker.genruntimeconfig.cache

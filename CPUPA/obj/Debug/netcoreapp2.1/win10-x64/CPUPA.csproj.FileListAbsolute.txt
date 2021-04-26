@@ -27,3 +27,4 @@ C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\obj\Debug\netcoreapp2.1\win
 C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.dll
 C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.pdb
 C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.genruntimeconfig.cache
+C:\Users\Josh\Documents\GitHub\CPUP-BuildTools\CPUPA\obj\Debug\netcoreapp2.1\win10-x64\CPUPA.csprojAssemblyReference.cache

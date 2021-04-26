@@ -7,13 +7,13 @@ namespace CPUPA
 {
     class Linter
     {
-        public static string[] Lint(string[] file, int stackSize, bool isLib)
+        public static string[] Lint(string[] file, int stackSize, bool isLib, bool verbose)
         {
-            return Lint(new List<string>(file),stackSize,isLib).ToArray();
+            return Lint(new List<string>(file),stackSize,isLib,verbose).ToArray();
         }
 
         private static int internalIDIndex = 0;
-        public static List<string> Lint(List<string> file, int stackSize,bool isLib)
+        public static List<string> Lint(List<string> file, int stackSize,bool isLib, bool verbose)
         {
             List<string> data = file;
             //Formatting

@@ -7,7 +7,7 @@ namespace CPUPA
     class Assembler
     {
 
-        public static Library assemble(bool isLib, string[] input)
+        public static Library assemble(bool isLib, string[] input, bool verbose)
         {
             //Important Variables that will be used throughout
             Library lib = new Library(isLib);
@@ -121,7 +121,7 @@ namespace CPUPA
 
             for(int i = 0; i < input.Length; i++)
             {
-                string line = input[i];
+                string line = input[i].Trim();
                 if (!definingFunction) //Not Defining
                 {
                     //Data Segment
@@ -230,7 +230,8 @@ namespace CPUPA
                                 Console.WriteLine("ERROR: Could not parse integer. Value:{0} {1} Error:\n{2}\nLine:\n{3}", line.Split(" ")[2].Trim(), line.Split(" ")[3].Trim(), e.Message,line);
                                 throw new Exception("-6");
                             }
-
+                            if(verbose)
+                                Console.WriteLine("INFO: Data definition,     Name: {4,-12} ID: {5,3} Start: {2,5} End: {3,5} Length: {0,4} Fill: {1,3}", length, converted, lib.code.Count,lib.code.Count + length - 1, line.Split(" ")[1],variables[line.Split(" ")[1]]);
                             //Add the value to the library
                             for(int j = 0; j < length; j++)
                             {
@@ -240,11 +241,6 @@ namespace CPUPA
                         }
 
 
-                    }
-                    //Using statement
-                    if (line.StartsWith("using"))
-                    {
-                        //does Nothing for now, this was handled during id creation
                     }
                     //Define statement
                     if (line.StartsWith("define"))
@@ -257,6 +253,8 @@ namespace CPUPA
                         functionStartIndex = lib.code.Count;
 
                         lib.internalAddresses.Add(functions[functionName], functionStartIndex);
+                        if(verbose)
+                            Console.WriteLine("INFO: Function definition, Name: {0,-12} ID: {2,3} Start: {1,5}", functionName,functionStartIndex, functions[functionName]);
                     }
                 }
                 else //Defining a function
@@ -272,8 +270,11 @@ namespace CPUPA
                     //Location Pointer Line
                      else if (line.StartsWith(":"))
                     {
+                        if (verbose)
+                            Console.WriteLine("INFO: Pointer definition,  Name: {0,-12} ID: {1,3} Start: {2,5}", line,-pointers[line], lib.code.Count);
+
                         //Register the address
-                        lib.internalAddresses.Add(pointers[line], lib.code.Count);
+                        lib.internalAddresses.Add(-pointers[line], lib.code.Count);
                     }
                     //Instruction Line
                     else 

@@ -9,12 +9,13 @@ namespace CPUPLinker
     class Linker
     {
         private List<ushort> machineCode;
-        private List<Library> libraries; 
-
-        public Linker()
+        private List<Library> libraries;
+        private bool isVerbose = false;
+        public Linker(bool verbose)
         {
             machineCode = new List<ushort>();
             libraries = new List<Library>();
+            isVerbose = verbose;
         }
 
         public void addLibrary(Library lib)
@@ -89,11 +90,13 @@ namespace CPUPLinker
                 //Internal Addresses
                 foreach(var entry in lib.internalAddresses)
                 {
+                    if(isVerbose)
+                        Console.WriteLine("INFO: Internal Address,  Index: {0,3} Key: {1,3} Value: {2,5}", IDIndex, entry.Key,entry.Value);
                     //Translation Entry
                     translationTable.Add(entry.Key, -IDIndex);
 
                     // Master Address Table entry
-                    masterAddressTable.Add(-IDIndex, (ushort)(lib.internalAddresses[entry.Key] + offset));
+                    masterAddressTable.Add(-IDIndex, (ushort)(entry.Value + offset));
 
                     //Increment IDIndex
                     IDIndex++;
@@ -101,11 +104,13 @@ namespace CPUPLinker
                 //Internal Variables
                 foreach (var entry in lib.internalVariables)
                 {
+                    if (isVerbose)
+                        Console.WriteLine("INFO: Internal Variable, Index: {0,3} Key: {1,3} Value: {2,5}", IDIndex, entry.Key, entry.Value);
                     //Translation Entry
                     translationTable.Add(entry.Key, -IDIndex);
 
                     // Master Address Table entry
-                    masterAddressTable.Add(-IDIndex, (ushort)(-(ushort)entry.Key + offset));
+                    masterAddressTable.Add(-IDIndex, (ushort)(entry.Value + offset));
 
                     //Increment IDIndex
                     IDIndex++;
@@ -144,6 +149,7 @@ namespace CPUPLinker
             {
                 if(workingMachineCode[i] < 0)
                 {
+                    int temp = workingMachineCode[i];
                     //an ID
 
                     //Check to see if it's in the master address table
@@ -171,6 +177,8 @@ namespace CPUPLinker
 
                         workingMachineCode[i] = newAddr;
                     }
+                    if (isVerbose)
+                        Console.WriteLine("INFO: Translating, ID: {0,3} Location: {1,5} Translation: {2,5}", temp, i, workingMachineCode[i]);
                 }
             }
 

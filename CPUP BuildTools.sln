@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPUPA", "CPUPA\CPUPA.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPUPLinker", "CPUPLinker\CPUPLinker.csproj", "{90FA2FF2-352B-49E9-BBBE-4C9E096C5684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUPBuild", "CPUPuild\CPUPBuild.csproj", "{79547143-BEB3-4E7D-8C7D-B0301903AC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPUPBuild", "CPUPuild\CPUPBuild.csproj", "{79547143-BEB3-4E7D-8C7D-B0301903AC35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

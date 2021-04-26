@@ -23,6 +23,7 @@ CPUPA.exe [Switches] inputFile.cpa output.lib
 Switches:
  -lib   | Does not have a main function, process as a library.
  -ss=VAL| Overide the stack size with VAL, default stack size is 4096 words
+ -v     | Verbose Mode, Prints addresses, IDs etc.
  
 ");
                 return 0;
@@ -53,6 +54,7 @@ Switches:
                 }
             }
             bool isLib = false;
+            bool verbose = false;
             int stackSize = 4096;
             foreach(string sw in switches){
                 switch (sw.Split("=")[0])
@@ -69,6 +71,9 @@ Switches:
                             Console.WriteLine("Could Not Parse Command Switch -SS, Unable to parse value {0} Error:\n{1}",sw, e.Message);
                             return -2;
                         }
+                        break;
+                    case "-v":
+                        verbose = true;
                         break;
                     default: Console.WriteLine("Unknown Switch: {0}", sw);
                         return -2;
@@ -93,7 +98,7 @@ Switches:
             string[] assembly;
             try
             {
-                assembly = Linter.Lint(input, stackSize, isLib);
+                assembly = Linter.Lint(input, stackSize, isLib, verbose);
             }
             catch(Exception e)
             {
@@ -108,7 +113,7 @@ Switches:
             Library output;
             try
             {
-                output = Assembler.assemble(isLib, assembly);
+                output = Assembler.assemble(isLib, assembly, verbose);
             }
             catch(Exception e)
             {

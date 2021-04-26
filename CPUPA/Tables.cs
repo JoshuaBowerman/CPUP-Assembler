@@ -81,7 +81,7 @@ namespace CPUPA
         public static List<string> setupCode = new List<string>()
         {
             "define CPUPA.SETUP",
-            "MOV .CPUPA.STACK ST",
+            "MOV [.CPUPA.STACK] ST",
             "CALL MAIN",
             ":CPUPA.HLT",
             "JMP :CPUPA.HLT",
@@ -128,16 +128,16 @@ namespace CPUPA
             },
             {"SIN", new List<string>(){
                 "COM 0",
-                "CMP IO 0",
+                "SUB IO 0",
                 "JE @-2",
                 "COM 3",
-                "MV IO $$"
+                "MOV IO $$"
             }},
             { "SOUT", new List<string>(){
                 "COM 1",
                 "SUB IO 0",
                 "JE @-2",
-                "MV $$ IO",
+                "MOV $$ IO",
                 "COM 2"
 
              } },

@@ -32,6 +32,7 @@ Switches:
  -hex       | Outputs a .hex file (Intel Hexadecimal File)
  -bin       | Outputs a .bin file (Binary File)
  -mif       | Outputs a .mif file (Intel Memory Initialization File)
+ -v         | Verbose Mode
  
 ");
                 return 1;
@@ -40,6 +41,7 @@ Switches:
             //Program Settings
             string outputType = "mif"; //this will be set to the desired output type, defaulting to mif
             string outputFile = "out.mif";
+            bool verbose = false;
 
             List<string> inputFileNames = new List<string>();
 
@@ -58,6 +60,9 @@ Switches:
                             break;
                         case "-mif":
                             outputType = "mif";
+                            break;
+                        case "-v":
+                            verbose = true;
                             break;
                         default:
                             Console.WriteLine("ERROR: Unkown Switch: {0}", arg);
@@ -87,7 +92,7 @@ Switches:
             }
 
             //Turn each input into a libray object
-            Linker linker = new Linker();
+            Linker linker = new Linker(verbose);
             foreach(string fileName in inputFileNames)
             {
                 Console.WriteLine("Importing {0}", fileName);
