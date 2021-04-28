@@ -87,7 +87,7 @@ namespace CPUPA
                         Console.WriteLine("ERROR: Pointer Contains More Than One Argument. Line:\n{0}", input[i]);
                         throw new Exception("-8");
                     }
-                    pointers.Add(input[i],ObjectIndex++);
+                    pointers.Add(input[i],-ObjectIndex++);
                 }
             }
 
@@ -271,10 +271,10 @@ namespace CPUPA
                      else if (line.StartsWith(":"))
                     {
                         if (verbose)
-                            Console.WriteLine("INFO: Pointer definition,  Name: {0,-12} ID: {1,3} Start: {2,5}", line,-pointers[line], lib.code.Count);
+                            Console.WriteLine("INFO: Pointer definition,  Name: {0,-12} ID: {1,3} Start: {2,5}", line,pointers[line], lib.code.Count);
 
                         //Register the address
-                        lib.internalAddresses.Add(-pointers[line], lib.code.Count);
+                        lib.internalAddresses.Add(pointers[line], lib.code.Count);
                     }
                     //Instruction Line
                     else 
@@ -340,6 +340,8 @@ namespace CPUPA
                                 //attach the variable's ID
                                 attachedData = variables[arg];
                                 hasAttached = true;
+                                if (verbose)
+                                    Console.WriteLine("INFO: Variable Use. ID: {0,5} Att: {1,5}", arg, variables[arg]);
                             }
                             //is it a pointer?
                             else if (pointers.ContainsKey(arg))
@@ -349,6 +351,8 @@ namespace CPUPA
                                 //attach the pointer's ID
                                 attachedData = pointers[arg];
                                 hasAttached = true;
+                                if (verbose)
+                                    Console.WriteLine("INFO: Pointer Use. ID: {0,5} Att: {1,5}",arg,pointers[arg]);
                             }
                             //is it a function?
                             else if (functions.ContainsKey(arg))

@@ -105,7 +105,7 @@ namespace CPUPLinker
                 foreach (var entry in lib.internalVariables)
                 {
                     if (isVerbose)
-                        Console.WriteLine("INFO: Internal Variable, Index: {0,3} Key: {1,3} Value: {2,5}", IDIndex, entry.Key, entry.Value);
+                        Console.WriteLine("INFO: Internal Variable, Index: {0,3} Key: {1,3} Value: {2,5} Name:", IDIndex, entry.Key,entry.Value);
                     //Translation Entry
                     translationTable.Add(entry.Key, -IDIndex);
 
